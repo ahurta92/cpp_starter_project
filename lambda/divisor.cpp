@@ -14,11 +14,20 @@ int main()
 {
     std::vector<int> vecVals = GenerateRandVec(10, 1, 50);
 
-    int sum =  0;
-    // applies function
-    std::for_each(vecVals.begin(), vecVals.end(),[&](int x){sum += x;});
+    int divisor;
+    std::vector<int> vecVals2;
+    std::cout << "List of Values Divisable by : ";
+    std::cin >> divisor;
+    
+    std::vector<int> evenVecVals;
 
-    std::cout<< "Sum" <<sum << "\n";
+    std::copy_if(vecVals.begin(),vecVals.end(),
+                    std::back_inserter(evenVecVals),
+                    [divisor](int x){ return (x % divisor) == 0;});
+    
+    std::for_each(evenVecVals.begin(),evenVecVals.end(),[](int x){std::cout<<x<<" ";});
+
+
     
     return 0;
 }

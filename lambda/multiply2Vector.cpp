@@ -13,13 +13,20 @@ std::vector<int> GenerateRandVec(int numOfNums,int min, int Max);
 int main()
 {
     std::vector<int> vecVals = GenerateRandVec(10, 1, 50);
+    /* 
+    for(auto a: vecVals)
+        std::cout<< a << "\n";
+        */
+    std::vector<int> vec1 = {1,2,3,4,5};
+    std::vector<int> vec2 = {1,2,3,4,5};
+    std::vector<int> vec3(5);
 
-    int sum =  0;
-    // applies function
-    std::for_each(vecVals.begin(), vecVals.end(),[&](int x){sum += x;});
+    transform(vec1.begin(),vec1.end(),vec2.begin(),vec3.begin(),
+                    [](int x, int y){return x + y; });
 
-    std::cout<< "Sum" <<sum << "\n";
-    
+    for(auto a: vec3)
+        std::cout<< a << "\n";
+
     return 0;
 }
 

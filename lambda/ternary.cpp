@@ -13,13 +13,16 @@ std::vector<int> GenerateRandVec(int numOfNums,int min, int Max);
 int main()
 {
     std::vector<int> vecVals = GenerateRandVec(10, 1, 50);
+    /* 
+    for(auto a: vecVals)
+        std::cout<< a << "\n";
+        */
+    int age = 43;
+    bool canIVote = (age >= 18 ) ? true : false;
+    std::cout.setf(std::ios::boolalpha);
+    std::cout<<" Can Derek Vote : "<<canIVote<<" \n";
 
-    int sum =  0;
-    // applies function
-    std::for_each(vecVals.begin(), vecVals.end(),[&](int x){sum += x;});
 
-    std::cout<< "Sum" <<sum << "\n";
-    
     return 0;
 }
 

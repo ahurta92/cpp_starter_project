@@ -7,19 +7,22 @@
 #include <ctime>
 #include <cmath>
 #include <algorithm>
+#include <functional>
 
 std::vector<int> GenerateRandVec(int numOfNums,int min, int Max);
 
 int main()
 {
     std::vector<int> vecVals = GenerateRandVec(10, 1, 50);
-
-    int sum =  0;
-    // applies function
-    std::for_each(vecVals.begin(), vecVals.end(),[&](int x){sum += x;});
-
-    std::cout<< "Sum" <<sum << "\n";
+    /* 
+    for(auto a: vecVals)
+        std::cout<< a << "\n";
+        */
     
+    std::function<int(int)> Fib = 
+        [&Fib](int n) { return n < 2 ? n :Fib(n-1)+Fib(n-2); };
+
+    std::cout<< "Fib 4 : " << Fib(4)<< "\n";
     return 0;
 }
 
