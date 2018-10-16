@@ -18,13 +18,10 @@ int main()
         std::cout<<val << "\n";
     }
     
-    std::vector<int> evenVecVals;
-
-    std::copy_if(vecVals.begin(),vecVals.end(), 
-        std::back_inserter(evenVecVals),
-        [](int x){ return (x%2)==0;});
+    std::sort(vecVals.begin(),vecVals.end(),
+        [](int x, int y){ return x > y;});
     std::cout<<"Sorted\n";
-    for (auto val: evenVecVals){
+    for (auto val: vecVals){
         std::cout<<val << "\n";
     }
     
