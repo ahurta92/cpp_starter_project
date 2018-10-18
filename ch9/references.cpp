@@ -22,6 +22,19 @@ int main(){
      cout<<"&intOne: " << &intOne<<endl;
      cout<<"&rSomeRef: "<< &rSomeRef<<endl;
 
+     int intTwo = 8; 
+     rSomeRef = intTwo;
+
+     cout<<"intOne: " << intOne<<endl;
+     cout<<"intTwo: " << intTwo<<endl;
+     cout<<"rSomeRef: "<< rSomeRef<<endl;
+
+    cout<<"&intOne: " << &intOne<<endl;
+     cout<<"&intTwo: " << &intTwo<<endl;
+     cout<<"&rSomeRef: "<< &rSomeRef<<endl;
+
+
+
 
 
 
