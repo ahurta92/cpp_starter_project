@@ -1,0 +1,42 @@
+All about bash programing.  
+
+BASH programing is taking BASH commands and scripting it.  
+
+# Take good notes.  
+# This is for light task automation 
+
+# If your writing more than 100 lines of code your probably doing it wrong.  
+# need to know pipes and redirection  
+
+# Bash Basics 
+echo "Hello there!" 
+# Take good notes.  
+# This is for light task automation 
+
+# Take good notes.  
+# This is for light task automation 
+
+> finds file and writes over. 
+> find file and appends
+
+wc -l < testfile
+
+use wordcount program with -l command and pass in testfile
+cat testfile |  wc -l   piped ino another command
+
+
+(cat testfile | wc -l) && echo "Done!"  cat test file and pipe into wc by line and echo done
+if the first statement executes without any problems do the second statement 
+
+ls asdkfasd || echo "success!"
+this is an or statement 
+
+some command 2> erro_log (is standard error)
+somcommand 1> error_log ( is standard out)
+
+somecommand >& (standard error and standard out)
+
+
+VARIABLES AND QUOTING
+
+echo "there are `wc -l < /etc/group` of lines in the /etc/group file"

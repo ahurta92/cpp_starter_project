@@ -1,0 +1,5 @@
+message="whoa"
+
+echo $message
+
+
